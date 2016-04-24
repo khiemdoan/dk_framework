@@ -6,7 +6,10 @@ namespace Framework {
 
     class Core {
 
-        private static $_paths = array('/application/controllers');
+        private static $_paths = array(
+			DIRECTORY_SEPARATOR . 'application' .DIRECTORY_SEPARATOR .'controllers',
+			''	// current folder
+		);
 
         // thiết lập autoload cho toàn bộ hệ thống
         public static function initialize() {
